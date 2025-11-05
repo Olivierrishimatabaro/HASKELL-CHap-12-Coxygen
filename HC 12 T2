@@ -1,0 +1,10 @@
+addTwoNumbers :: Int -> Int -> Int
+addTwoNumbers x y = x + y
+
+-- Fonction principale
+main :: IO ()
+main = do
+    let a = 10
+    let b = 20
+    let result = addTwoNumbers a b
+    putStrLn ("La somme de " ++ show a ++ " et " ++ show b ++ " est : " ++ show result)
