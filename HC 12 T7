@@ -1,0 +1,11 @@
+
+
+calculateCircleArea :: Float -> Float
+calculateCircleArea radius = pi * radius * radius
+
+main :: IO ()
+main = do
+    let radius = 5      -- rayon du cercle (modifiable)
+        area = calculateCircleArea radius
+    putStrLn ("Le rayon du cercle est : " ++ show radius)
+    putStrLn ("L'aire du cercle est : " ++ show area)
