@@ -1,0 +1,33 @@
+
+add :: Num a => a -> a -> a
+add x y = x + y
+
+subtract' :: Num a => a -> a -> a
+subtract' x y = x - y
+
+multiply :: Num a => a -> a -> a
+multiply x y = x * y
+
+divide :: Float -> Float -> Float
+divide x y = x / y
+
+factorial :: Integer -> Integer
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
+
+-- -------------------------------------------------
+-- Programme principal
+-- -------------------------------------------------
+main :: IO ()
+main = do
+    putStrLn "===== Démonstration des opérations mathématiques ====="
+    
+    let a = 10
+        b = 5
+        n = 6
+
+    putStrLn $ show a ++ " + " ++ show b ++ " = " ++ show (add a b)
+    putStrLn $ show a ++ " - " ++ show b ++ " = " ++ show (subtract' a b)
+    putStrLn $ show a ++ " * " ++ show b ++ " = " ++ show (multiply a b)
+    putStrLn $ show a ++ " / " ++ show b ++ " = " ++ show (divide (fromIntegral a) (fromIntegral b))
+    putStrLn $ show n ++ "! = " ++ show (factorial n)
