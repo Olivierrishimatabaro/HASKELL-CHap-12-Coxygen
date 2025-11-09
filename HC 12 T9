@@ -1,0 +1,28 @@
+main = do
+    -- Nom du fichier simulé
+    let filename = "monfichier.txt"
+
+    -- Contenu simulé du fichier
+    let content = unlines
+          [ "Bonjour Olivier !"
+          , "Ceci est un test de lecture de fichier."
+          , "Le programme fonctionne comme si on lisait un vrai fichier."
+          , "Amuse-toi à modifier ce texte pour tester."
+          ]
+
+    -- Affichage du nom du fichier
+    putStrLn $ "Lecture du fichier : " ++ filename
+    putStrLn "\n--- Contenu ---"
+    putStrLn content
+
+    -- Statistiques simples
+    let nbLignes = length (lines content)
+    let nbMots   = length (words content)
+    let nbChars  = length content
+
+    putStrLn "----------------------------"
+    putStrLn $ "Nombre de lignes : " ++ show nbLignes
+    putStrLn $ "Nombre de mots   : " ++ show nbMots
+    putStrLn $ "Nombre de caractères : " ++ show nbChars
+    putStrLn "----------------------------"
+    putStrLn "✅ Fin de la lecture simulée."
